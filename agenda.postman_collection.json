@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "contatos",
+			"name": "lista de contatos",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -32,12 +32,12 @@
 			"response": []
 		},
 		{
-			"name": "pesquisar id",
+			"name": "pesquisar contatos pelo id",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/contatos/4",
+					"raw": "http://localhost:8000/contatos/5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -45,7 +45,7 @@
 					"port": "8000",
 					"path": [
 						"contatos",
-						"4"
+						"5"
 					]
 				}
 			},
@@ -74,6 +74,26 @@
 					"port": "8000",
 					"path": [
 						"contatos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar contatos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/contatos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"contatos",
+						"1"
 					]
 				}
 			},
