@@ -55,3 +55,19 @@ app.delete('/contatos/:id', (req, res)=>{
         }
     });
 });
+
+//atualiza os contatos 
+app.put('/contatos/:id', (req, res)=>{
+    let dados = req.body;
+    let id = req.params.id;
+    let cmd_update = "update contato set nome = ?, idade = ?, email = ? where id = ?";
+    let dados_body = [dados.nome, dados.idade, dados.email, id];
+
+    db.query(cmd_update, dados_body, (error, result)=>{
+        if (error){
+            res.status(400).send({message:"erro"});
+        }else{
+            res.status(201).json({message:"contato editado com sucesso!"});
+        }
+    });
+});

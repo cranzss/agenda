@@ -98,6 +98,35 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "atualizar contatos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"luis\",\r\n    \"idade\": 13,\r\n    \"email\":\"luis@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/contatos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"contatos",
+						"4"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
